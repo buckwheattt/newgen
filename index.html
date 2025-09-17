@@ -1,0 +1,168 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>NewGen Watch A8 — landing</title>
+    <meta name="description" content="NewGen Watch A8 — connecting health and fashion. Bluetooth calls, voice planning, up to 15 days of battery.">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="dist/css/main.min.css">
+    <link rel="stylesheet" href="dist/css/main.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+<body class="page">
+    <header class="header">
+        <div class="container header__row">
+            <a class="logo" href="#top" aria-label="NewGen">NEWGEN</a>
+            <nav class="nav" aria-label="Primary">
+                <button class="nav__toggle" aria-expanded="false" aria-controls="navMenu">☰</button>
+                <ul class="nav__menu" id="navMenu">
+                    <li class="nav__item"><a class="nav__link" href="#about">About</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#reviews">Reviews</a></li>
+                    <li class="nav__item"><a class="button button--sm" href="#preorder">Preorder</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="top">
+        <!-- Hero -->
+        <section class="hero" aria-labelledby="heroTitle">
+            <div class="container hero__grid">
+                <div class="hero__content">
+                    <h1 class="hero__title" id="heroTitle">Watch A8</h1>
+                    <p class="hero__subtitle">Connecting health and fashion</p>
+                    <div class="hero__cta">
+                        <a class="button button--primary" href="#preorder">Preorder</a>
+                        <button class="button button--ghost" data-modal-open="orderModal">Quick order</button>
+                    </div>
+                </div>
+                <picture class="hero__media">
+                    <source srcset="images/hero.webp" type="image/webp" />
+                    <img src="images/hero.jpg" alt="NewGen Watch A8 smartwatch" loading="eager" style="max-width: 100%; height: auto;">
+                </picture>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features" id="about" aria-label="Features">
+            <div class="container">
+                <ul class="features__list">
+                    <li class="features__item feature">
+                        <h3 class="feature__title">Calls</h3>
+                        <p class="feature__text">Keep in touch via Bluetooth calls.</p>
+                    </li>
+                    <li class="features__item feature">
+                        <h3 class="feature__title">Voice</h3>
+                        <p class="feature__text">Make plans with your voice.</p>
+                    </li>
+                    <li class="features__item feature">
+                        <h3 class="feature__title">
+                            Battery
+                        </h3>
+                        <p class="feature__text">
+                            Up to <strong class="u-press">15</strong> days on a charge.
+                        </p>
+                    </li>
+                    <li class="features__item feature">
+                        <h3 class="feature__title">
+                            Analytics
+                        </h3>
+                        <p class="feature__text">
+                            <strong class="u-press">60%</strong> better at heart-rate and calorie analysis.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Say -->
+        <section class="say">
+            <div class="container say__box">
+                <h2 class="say__title">Just say it</h2>
+                <p class="say__ex">“meeting tomorrow at 5 pm on Arbat” — it appears in your calendar and you get a reminder.</p>
+            </div>
+        </section>
+
+        <!-- Reviews -->
+        <section class="reviews" id="reviews" aria-labelledby="reviewsTitle">
+            <div class="container">
+                <h2 class="section-title" id="reviewsTitle">Reviews</h2>
+                <div class="reviews__list">
+                    <article class="review-card">
+                        <header class="review-card__header">
+                            <div class="review-card__avatar" aria-hidden="true">R</div>
+                            <div>
+                                <div class="review-card__name">Ronald</div>
+                                <div class="review-card__rate" aria-label="rating 5 out of 5">★★★★★</div>
+                            </div>
+                        </header>
+                        <p class="review-card__text">These watches basically became my assistant. I speak my plans — they land in the calendar. No stress, no misses.</p>
+                    </article>
+
+                    <article class="review-card">
+                        <header class="review-card__header">
+                            <div class="review-card__avatar" aria-hidden="true">A</div>
+                            <div>
+                                <div class="review-card__name">Anna</div>
+                                <div class="review-card__rate" aria-label="rating 5 out of 5">★★★★★</div>
+                            </div>
+                        </header>
+                        <p class="review-card__text">15 days off the outlet — awesome. Love the minimal look and the strap.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preorder -->
+        <section class="preorder" id="preorder" aria-labelledby="preTitle">
+            <div class="container">
+                <h2 class="section-title" id="preTitle">Preorder</h2>
+                <form class="form" id="orderForm" action="#" method="post" novalidate>
+                    <div class="form__row">
+                        <label class="form__label" for="name">Full name</label>
+                        <input id="name" class="form__input" type="text" name="name" placeholder="John Smith" required minlength="2">
+                    </div>
+                    <div class="form__row">
+                        <label class="form__label" for="email">Email</label>
+                        <input id="email" class="form__input" type="email" name="email" placeholder="name@example.com" required>
+                    </div>
+                    <button class="button button--primary form__submit" type="submit">Send</button>
+                    <p class="form__note">By clicking “Send” you agree to the privacy policy.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container footer__grid">
+            <div>
+                <div class="logo">NEWGEN</div>
+                <p class="footer__copy">© 2017–2025 NewGen. All rights reserved.</p>
+            </div>
+            <nav class="footer__nav" aria-label="Links">
+                <a href="#about">About</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#preorder">Preorder</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="orderModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal__backdrop" data-modal-close></div>
+        <div class="modal__dialog" role="document">
+            <button class="modal__close" data-modal-close aria-label="Close">×</button>
+            <h3 class="modal__title" id="modalTitle">Quick order</h3>
+            <form class="form form--tight" id="quickForm" action="#" method="post" novalidate>
+                <label class="form__label" for="qemail">Email</label>
+                <input id="qemail" class="form__input" type="email" name="email" placeholder="name@example.com" required>
+                <button class="button button--primary form__submit" type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="src/js/main.js" defer></script>
+</body>
+</html>

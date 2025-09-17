@@ -1,0 +1,23 @@
+# Visual Studio cache
+.vs/
+*.vsidx
+*.vscode/
+
+# Node modules (если будут)
+node_modules/
+
+# Sass cache
+.sass-cache/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE / Editors
+.vs/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+

@@ -1,0 +1,12 @@
+{
+  "name": "newgen-landing",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "sass --watch src/scss/main.scss dist/css/main.css",
+    "build:css": "sass src/scss/main.scss dist/css/main.min.css --style=compressed"
+  },
+  "devDependencies": {
+    "sass": "^1.77.0"
+  }
+}

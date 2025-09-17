@@ -1,0 +1,257 @@
+// ===== Variables =====
+$font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+$bg: #ffffff;
+$text: #111;
+$muted: #666;
+$primary: #111; // чёрные кнопки в стиле макета
+$accent: #0a0a0a;
+$radius: 20px;
+$container: 1060px;
+
+// === Fonts ===
+$font-press: 'Press Start 2P', cursive;
+
+// Logo style
+.logo {
+    font-weight: 800;
+    letter-spacing: .06em;
+    font-family: $font-press; // применяем к логотипу
+}
+
+// Utility class for digits
+.u-press {
+    font-family: $font-press;
+    letter-spacing: 0.05em;
+}
+
+
+// ===== Mixins =====
+@mixin container {
+    width: min(100% - 32px, #{$container});
+    margin-inline: auto;
+}
+
+@mixin shadow {
+    box-shadow: 0 8px 24px rgba(0,0,0,.06);
+}
+
+@mixin md {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
+
+// ===== Base =====
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: $font-stack;
+    background: $bg;
+    color: $text;
+    line-height: 1.5;
+}
+
+img, picture {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    @include container;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+// ===== Header =====
+.header {
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,.8);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+
+.header__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+}
+
+.logo {
+    font-weight: 800;
+    letter-spacing: .06em;
+}
+
+.nav__toggle {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    padding: 6px 10px;
+}
+
+.nav__menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 12px;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: $text;
+}
+
+.nav__item {
+    display: inline-block;
+}
+
+@include md {
+    .nav__toggle {
+        display: none;
+    }
+
+    .nav__menu {
+        display: flex;
+    }
+}
+
+// ===== Buttons =====
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 18px;
+    border-radius: 999px;
+    text-decoration: none;
+    border: 1px solid #e6e6e6;
+    transition: transform .05s ease, box-shadow .2s ease;
+    font-weight: 600;
+
+    &:active {
+        transform: translateY(1px);
+    }
+
+    &--primary {
+        background: $primary;
+        color: #fff;
+        border-color: $primary;
+    }
+
+    &--ghost {
+        background: #fff;
+        color: $text;
+    }
+
+    &--sm {
+        padding: 8px 12px;
+        font-size: .9rem;
+    }
+}
+
+// ===== Hero =====
+.hero {
+    padding: 28px 0 8px;
+}
+
+.hero__grid {
+    display: grid;
+    gap: 16px;
+    align-items: center;
+}
+
+.hero__title {
+    font-size: 2.2rem;
+    letter-spacing: .02em;
+    margin: 0 0 4px;
+}
+
+.hero__subtitle {
+    color: $muted;
+    margin: 0 0 16px;
+}
+
+.hero__cta {
+    display: flex;
+    gap: 10px;
+}
+
+.hero__media {
+    border-radius: $radius;
+    overflow: hidden;
+    @include shadow;
+}
+
+@include md {
+    .hero {
+        padding: 48px 0 20px;
+    }
+
+    .hero__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero__title {
+        font-size: 3rem;
+    }
+}
+
+// ===== Features =====
+.features {
+    padding: 20px 0;
+}
+
+.features__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.feature {
+    background: #f2f2f2;
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.feature__title {
+    font-size: 1rem;
+    margin: 0 0 6px;
+}
+
+.feature__text {
+    margin: 0;
+    color: $muted;
+}
+
+@include md {
+    .features__list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+// ===== Say =====
+.say {
+    padding: 8px 0 28px;
+}
+
+.say__box {
+    background: #0f0f0f;
+    color: #fff;
+    border-radius: 18px;
+    padding:
