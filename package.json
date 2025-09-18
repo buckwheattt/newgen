@@ -3,10 +3,24 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "sass --watch src/scss/main.scss dist/css/main.css",
-    "build:css": "sass src/scss/main.scss dist/css/main.min.css --style=compressed"
+    "debug:css": "sass --style=expanded --source-map src/scss/main.scss dist/css/debug.css",
+    "build:css": "sass src/scss/main.scss dist/css/main.min.css --style=compressed",
+    "watch:css": "sass --watch src/scss/main.scss dist/css/main.min.css --style=compressed"
   },
   "devDependencies": {
-    "sass": "^1.77.0"
-  }
+    "sass": "^1.92.1"
+  },
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buckwheattt/newgen.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/buckwheattt/newgen/issues"
+  },
+  "homepage": "https://github.com/buckwheattt/newgen#readme"
 }
