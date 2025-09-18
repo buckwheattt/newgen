@@ -110,7 +110,7 @@ $container: 1060px;
 .nav__menu {
     display: flex;
     align-items: center;
-    gap: 36px;
+    gap: clamp(12px, 4vw, 48px);
     list-style: none;
     margin: 0;
     padding: 0;
