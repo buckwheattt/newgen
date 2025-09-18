@@ -272,11 +272,14 @@ $container: 1060px;
         padding: 20px 0;
     }
 
-    .features__list {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-    }
+.features__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
     .feature {
         background: #f2f2f2;
@@ -294,11 +297,14 @@ $container: 1060px;
         color: $muted;
     }
 
-    @include md {
-        .features__list {
-            grid-template-columns: repeat(4, 1fr);
-        }
+@include md {
+    .features__list {
+        grid-template-columns: repeat(4, 1fr);
+        list-style: none;
+        padding: 0;
+        margin: 0;
     }
+}
     // ===== Say =====
     .say {
         padding: 8px 0 28px;
